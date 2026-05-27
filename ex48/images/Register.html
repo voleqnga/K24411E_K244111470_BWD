@@ -75,8 +75,29 @@
                     <input type="text" name="country" id="country" value="country" required>
                 </td>
             </tr>
-            <hr>
             
+            <tr>
+                <td> 
+                    Product
+                </td>
+                <td>
+                    <form name="product">
+                        <select name="products" id="products" onchange="product.selectedproduct.value=this.value;
+                        product.selectedproductname.value=this.options[this.selectedIndex].text;">
+                            <option value="hanoi">Hanoi</option>
+                            <option value="hcm">Ho Chi Minh City</option>
+                            <option value="danang">Da Nang</option>
+                            <option value="hue">Hue</option>
+                            <option value="hue">Hue</option>
+                        </select>
+                        <p> Value of selected province:</p>    
+                        <input type="text" id="selectedproduct" readonly>
+                        <p> Name of selected Province</p>
+                        <input type="text" id="selectedproductname" readonly>
+                    </form>
+                </td>
+            </tr>
+
         </table>
     </form>
 </body>
