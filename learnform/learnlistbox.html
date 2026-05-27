@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Page Title</title>
+</head>
+<body>
+    <form name="colorForm">
+        <h3> Select background color:</h3>
+        <select id="colorSelect" name="colorSelect" size="5" onchange="colorForm.selectedColor.value=this.value;
+        colorForm.selectedColor.style.backgroundColor=this.value">
+            <option value="white">White</option>
+            <option value="lightgray">Light Gray</option>
+            <option value="lightblue">Light Blue</option>
+            <option value="lightgreen">Light Green</option>
+            <option value="lightyellow">Light Yellow</option>
+        </select>
+        <p> Your selected color is:</p>
+        <input type="text" id="selectedColor" name="selectedColor">
+    </form>
+    <form name="imgForm">
+        <h3> Select an image:</h3>
+        <select id="imgSelect" name="imgSelect" size="5" onchange="document.getElementById('selectedImg').src=this.value">
+            <option value="logouel.png">UEL</option>
+            <option value="logovnu.png">VNU</option>
+            <option value="tải xuống.jpg">My Avatar</option>
+        </select>
+        <p> Your selected image is:</p>
+        <img id="selectedImg" name="selectedImg" alt="No Image Selected" 
+        style="width:200px; height:200px">
+    </form>
+</body>
+</html>
