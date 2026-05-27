@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Travel Expense Report</title>
+    <title>Ex50</title>
     <style>
         body {
             background-color: #ccffff; 
@@ -54,10 +54,7 @@
             width: 90%; 
             box-sizing: border-box; 
         }
-        .footer-text { 
-            font-size: 0.9em; 
-            margin-top: 20px;
-        }
+        
     </style>
 </head>
 <body>
@@ -196,20 +193,15 @@
             </tr>
             <tr>
                 <td colspan="2">
-                    <button type="submit">Submit travel expenses</button>
+                    <button type="button" onclick="alert('Alert for submit')">Submit travel expenses</button>
                     <button type="reset">Reset</button>
                 </td>
             </tr>
         </table>
     </form>
 
-    <div class="footer-text">
+    <div >
         Questions? Contact Debbie Larson in Accounting (ext. 2150).
     </div>
-
-    <form onsubmit="alert('Alert for submit'); return false;">
-        <button type="submit">Submit</button>
-    </form>
-
 </body>
 </html>
