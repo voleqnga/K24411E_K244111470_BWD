@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Page Title</title>
+    <script>
+        function solveEquation()
+        {
+            //alert("Solving Equation...");
+            var a = parseFloat(myform.input_a.value);
+            var b = parseFloat(myform.input_b.value);
+            //alert("a = " + a + ", b = " + b);
+            var result=""
+            if (a==0)
+            {
+                if (b==0)
+                    result = "Infinite solutions";
+                else
+                    result = "No solution";
+            }
+            else
+            {
+                result = -b/a;
+            }
+            myform.input_result1.value = result;
+            input_result.innerHTML="<font color='blue'>" + result + "</font>";
+        }
+    </script>
+</head>
+<body>
+    <form name="myform">
+        <h1> First degree equation </h1>
+        <table>
+            <tr>
+                <td> a: </td>
+                <td> <input type="text" id="input_a" name="input_a"> </td>
+            </tr>
+            <tr>
+                <td> b: </td>
+                <td> <input type="text" id="input_b" name="input_b"> </td>
+            </tr>
+            <tr>
+                <td> Result way 1 </td>
+                <td> <input type="text" id="input_result1" name="input_result1" readonly> </td>
+            </tr>
+            <tr>
+                <td> Result way 2 </td>
+                <td> <input type="text" id="input_result2" name="input_result2" readonly> </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="button" onclick="solveEquation()" value="Solve">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Page Title</title>
+    <style>
+        #id_course2, #id_course3 {
+            display: none;
+        }
+    </style>
+    <script>
+        function show1(){
+        id_course1.style.display = 'block';
+        id_course2.style.display = 'none';
+        id_course3.style.display = 'none';
+        }
+        function show2(){
+        id_course1.style.display = 'none';
+        id_course2.style.display = 'block';
+        id_course3.style.display = 'none';
+        }
+        function show3(){
+        id_course1.style.display = 'none';
+        id_course2.style.display = 'none';
+        id_course3.style.display = 'block';
+        }
+        function changeCourseSelect() {
+            var selected = myform.coursevalue.value;
+            if (selected == "course1") show1();
+            if (selected == "course2") show2();
+            if (selected == "course3") show3();
+        }
+        function calculateGPA(){
+            var selected = myform.coursevalue.value;
+            if (selected == "course1") {
+                var qt1 = parseFloat(myform.qt1.value);
+                var gk1 = parseFloat(myform.gk1.value);
+                var ck1 = parseFloat(myform.ck1.value);
+                var result=(qt1*0.2 + gk1*0.3 + ck1*0.5).toFixed(2);
+            }
+            if (selected == "course2") {
+                var qt2 = parseFloat(myform.qt2.value);
+                var gk2 = parseFloat(myform.gk2.value);
+                var ck2 = parseFloat(myform.ck2.value);
+                var ad2 = parseFloat(myform.ad2.value);
+                var result = (qt2*0.15 + gk2*0.2 + ck2*0.5 + ad2*0.15).toFixed(2);
+            }
+            if (selected == "course3") {
+                var qt3 = parseFloat(myform.qt3.value);
+                var gk3 = parseFloat(myform.gk3.value);
+                var ck3 = parseFloat(myform.ck3.value);
+                var result = (qt3*0.25 + gk3*0.25 + ck3*0.5).toFixed(2);
+            }   
+                
+            myform.gpa.value = result;    
+            alert("Your GPA is: " + myform.gpa.value);
+            }
+    </script>
+</head>
+<body>
+    <form name="myform">
+        <h1> GPA </h1>
+        <select name="coursevalue" onchange="changeCourseSelect()">
+            <option name="course" value="course1" id="course1" >Course 1</option>
+            <option name="course" value="course2" id="course2" >Course 2</option>
+            <option name="course" value="course3" id="course3" >Course 3</option>
+        </select>
+        <div id="id_course1">
+            <h4> QT:
+                <input type="text" name="qt1" id="qt1" size="5" maxlength="5">
+            </h4>
+            <h4> GK:
+                <input type="text" name="gk1" id="gk1" size="5" maxlength="5">
+            </h4>
+            <h4> CK:
+                <input type="text" name="ck1" id="ck1" size="5" maxlength="5">
+            </h4>
+        </div>
+        <div id="id_course2">
+            <h4> QT:
+                <input type="text" name="qt2" id="qt2" size="5" maxlength="5" >
+            </h4>
+            <h4> GK:
+                <input type="text" name="gk2" id="gk2" size="5" maxlength="5">
+            </h4>
+            <h4> CK:
+                <input type="text" name="ck2" id="ck2" size="5" maxlength="5">
+            </h4>
+            <h4> AD:
+                <input type="text" name="ad2" id="ad2" size="5" maxlength="5" >
+            </h4>
+        </div>
+        <div id="id_course3">
+            <h4> QT:
+                <input type="text" name="qt3" id="qt3" size="5" maxlength="5" >
+            </h4>
+            <h4> GK:
+                <input type="text" name="gk3" id="gk3" size="5" maxlength="5" >
+            </h4>
+            <h4> CK:
+                <input type="text" name="ck3" id="ck3" size="5" maxlength="5" >
+            </h4>
+        </div>
+        <br>
+        <button type="button" onclick="calculateGPA()">Calculate GPA</button>
+        <br>
+        <label for="gpa"> Result:</label>
+        <input type="text" name="gpa" id="gpa" size="5" maxlength="5" readonly>
+    </form>
+</body>
+</html>
+    </form>
+</body>
+</html>
