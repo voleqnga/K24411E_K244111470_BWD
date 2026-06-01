@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Page Title</title>
+</head>
+<body>
+    <h1> Provinces</h1>
+    <form name="provinceForm">
+        <select name="provinces" id="provinces" onchange="provinceForm.selectedprovince.value=this.value;
+        provinceForm.selectedprovincename.value=this.options[this.selectedIndex].text;">
+            <option value="hanoi">Hanoi</option>
+            <option value="hcm">Ho Chi Minh City</option>
+            <option value="danang">Da Nang</option>
+            <option value="hue">Hue</option>
+        </select>
+        <p> Value of selected province:</p>    
+        <input type="text" id="selectedprovince" readonly>
+        <p> Name of selected Province</p>
+        <input type="text" id="selectedprovincename" readonly>
+    </form>
+</body>
+</html>
