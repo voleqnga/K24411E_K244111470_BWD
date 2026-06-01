@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Ex51</title>
+    <style>
+        body {
+            background-color: #106860; 
+            color:#ffffff;
+            font-family: "Times New Roman", Times, serif;
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 800px;
+        }
+        .logo {
+            width: 80%;
+            display: block;
+            margin: auto;
+        }
+        h1{
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        td {
+            padding: 8px 0; 
+            vertical-align: top;
+        }
+        .input-box {
+            padding: 5px;
+            box-sizing: border-box;
+        }
+        .short {
+            width: 150px;
+        }
+        .long {
+            width: 300px;
+        }
+        select {
+            width: 100%;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #004d40; 
+            color: #ffffff; 
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <img src="/ex51/Logo.gif">
+    </div>
+    <h1>
+        Newborn Registration
+    </h1>
+    <form name="registrationForm">
+        <table>
+            <tr>
+                <td colspan="2">
+                    Date: 
+                    <input type="text" class="input-box short" value="mm/dd/yy">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    1) Infant's first name: 
+                    <input type="text" class="input-box long">
+                </td>
+                <td>
+                    Last: 
+                    <input type="text" class="input-box long">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    2) Medical Record #: 
+                    <input type="text" class="input-box short">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    3) Date of birth: 
+                    <input type="text" class="input-box short" value="mm/dd/yy">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    4) Birth weight: 
+                    <input type="text" class="input-box short">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    5) APGAR score: 
+                    <input type="text" class="input-box short">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    6) Mother's first name: 
+                    <input type="text" class="input-box long">
+                </td>
+                <td>
+                    Last: 
+                    <input type="text" class="input-box long">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    7) Father's first name: 
+                    <input type="text" class="input-box long">
+                </td>
+                <td>
+                    Last: 
+                    <input type="text" class="input-box long">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <span style="display: inline-block; vertical-align: top; margin-right: 5px;">
+                        8) Physician (check <br>all that apply):
+                    </span>
+                    
+                    <select multiple size="4" style="vertical-align: top; width: 180px;" 
+                    onchange="console.log('Selected: ' + this.value)">                        
+                        <option>Dr. Warren Albert</option>
+                        <option>Dr. Maria Alvarez</option>
+                        <option>Dr. Karen Brinkman</option>
+                        <option>Dr. Micheal Kerry</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+
+        <div style="text-align: center; margin-top: 20px;">
+            <button type="button" onclick="alert('Registration successful!')">Register</button>
+            <button type="button" onclick="document.registrationForm.reset()">Cancel</button>
+        </div>
+    </form>
+</body>
+</html>
