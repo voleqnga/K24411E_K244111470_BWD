@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Submission Receipt</title>
+    <style>
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: #eef2f5; 
+            display: flex; 
+            justify-content: center; 
+            padding: 50px 20px;
+        }
+        
+        .result { 
+            background: #ffffff; 
+            width: 100%; 
+            max-width: 600px; 
+            padding: 40px; 
+            border-radius: 12px; 
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08); 
+            border-top: 6px solid #0323f4; 
+        }
+        
+        h2 { 
+            text-align: center; 
+            color: #fa7204; 
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .info { 
+            margin-bottom: 20px; 
+            padding-bottom: 15px; 
+            border-bottom: 1px dashed #e0e0e0; 
+        }
+        
+        .info:last-child { 
+            border-bottom: none; 
+        } 
+        
+        .label { 
+            font-weight: bold; 
+            color: #09026b; 
+            font-size: 13px; 
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        /* BÍ THUẬT NẰM Ở ĐÂY: Ép input tàng hình */
+        input.value { 
+            color: black; 
+            font-size: 16px; 
+            font-weight: 500;
+            border: none;             /* Xóa viền */
+            background: transparent;  /* Nền trong suốt */
+            width: 100%;
+            outline: none;            /* Xóa viền xanh khi click */
+            font-family: inherit;     /* Kế thừa font chữ của body */
+        }
+        
+        textarea.content { 
+            background: #f9fbfd; 
+            padding: 15px; 
+            border-radius: 8px; 
+            border: 1px solid #dce4ec; 
+            margin-top: 10px; 
+            color: black;
+            font-size: 15px;
+            line-height: 1.6;
+            width: 100%;
+            resize: none;            
+            outline: none;
+            font-family: inherit;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="result">
+        <h2>Message Received</h2>
+        
+        <form name="receiptForm">
+            
+            <div class="info">
+                <span class="label">Full Name</span>
+                <input type="text" class="value" name="fullname" readonly>
+            </div>
+            
+            <div class="info">
+                <span class="label">Email Address</span>
+                <input type="text" class="value" name="email" readonly>
+            </div>
+            
+            <div class="info">
+                <span class="label">Forwarded To</span>
+                <input type="text" class="value" name="sendto" readonly>
+            </div>
+            
+            <div class="info">
+                <span class="label">Subject / Title</span>
+                <input type="text" class="value" name="title" readonly>
+            </div>
+            
+            <div class="info">
+                <span class="label">Message Content</span>
+                <textarea class="content" name="content" rows="6" readonly></textarea>
+            </div>
+
+        </form>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        document.receiptForm.fullname.value = urlParams.get('fullname') || 'N/A';
+        document.receiptForm.email.value = urlParams.get('email') || 'N/A';
+        document.receiptForm.sendto.value = urlParams.get('sendto') || 'N/A';
+        document.receiptForm.title.value = urlParams.get('title') || 'N/A';
+        document.receiptForm.content.value = urlParams.get('content') || 'No content provided.';
+    </script>
+
+</body>
+</html>
