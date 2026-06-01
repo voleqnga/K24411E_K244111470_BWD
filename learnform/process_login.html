@@ -2,8 +2,100 @@
 <html>
 <head>
     <meta charset='utf-8'>
-    <title>Page Title</title>
+    <title>Login Result</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background: #f0f2f5;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            background: #fff;
+            padding: 30px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+            border-radius: 12px;
+            text-align: center;
+        }
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background: #4CAF50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+        tr:hover {
+            background: #f0f0f0;
+        }
+        .back-btn {
+            background: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        .back-btn:hover {
+            background: #45a049;
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <h2>Login Information</h2>
+        <table>
+            <tr>
+                <th>Field</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Username</td>
+                <td id="username">-</td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td id="password">-</td>
+            </tr>
+            <tr>
+                <td>Remember Me</td>
+                <td id="remember">-</td>
+            </tr>
+        </table>
+        <button class="back-btn" onclick="history.back()">Back to Login</button>
+    </div>
+
+    <script>
+        // Hàm lấy tham số từ URL
+        function getQueryParam(param) {
+            var urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param) || '-';
+        }
+
+        // Lấy dữ liệu từ URL và hiển thị
+        document.getElementById('username').textContent = getQueryParam('username');
+        document.getElementById('password').textContent = getQueryParam('password');
+        
+        var remember = getQueryParam('remember');
+        document.getElementById('remember').textContent = (remember === 'yes') ? 'Yes' : 'No';
+    </script>
 </body>
 </html>
