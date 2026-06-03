@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Ex55</title>
+    <script>
+        function PTB1(a, b) {
+            var result = "";
+            if(a == 0)
+            {
+                if(b == 0) result = "Infinite Solution";
+                else result = "No solution";
+            }
+            else
+            {
+                result = (-b / a);
+            }
+            return result;
+        }
+        function PTB2() {
+            var a = Number(myForm.input_a.value);
+            var b = Number(myForm.input_b.value);
+            var c = Number(myForm.input_c.value);
+            var result = "";
+            if (a == 0) {
+                result = PTB1(b, c);
+            } else {
+                var delta = b * b - 4 * a * c;
+
+                if (delta < 0) {
+                    result = "No solution";
+                } else if (delta == 0) {
+                    var x = -b / (2 * a);
+                    result = "x = " + x;
+                } else {
+                    var x1 = (-b - Math.sqrt(delta)) / (2 * a);
+                    var x2 = (-b + Math.sqrt(delta)) / (2 * a);
+
+                    result = "x1 = " + x1 + " ; x2 = " + x2;
+                }
+            }
+            myForm.input_result.value = result;
+        }
+        function clearData() 
+        {
+            myForm.input_a.value = "";
+            myForm.input_b.value = "";
+            myForm.input_c.value = "";
+            myForm.input_result.value = "";
+        }
+    </script>
+</head>
+<body>
+    <form name="myForm">
+        <table border="1">
+            <caption style="background-color:rgb(89, 209, 199)"> The Quaratic Equation </caption>
+            <tr>
+                <td>a:</td>
+                <td>
+                    <input type="text" id="input_a" name="input_a">
+                </td>
+            </tr>
+
+            <tr>
+                <td>b:</td>
+                <td>
+                    <input type="text" id="input_b" name="input_b">
+                </td>
+            </tr>
+
+            <tr>
+                <td>c:</td>
+                <td>
+                    <input type="text" id="input_c" name="input_c">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Result:</td>
+                <td>
+                    <input type="text" id="input_result" name="input_result" style="color: red;" readonly>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <input type="button" value="Find solution" onclick="PTB2()">
+                    <input type="button" value="Clear" onclick="clearData()">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
