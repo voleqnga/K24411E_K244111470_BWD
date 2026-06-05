@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Page Title</title>
+    <script>
+
+    </script>
+</head>
+<body>
+    <h3> List of sample values:</h3>
+    <div id="mydiv">
+
+    </div>
+    <table>
+        <colgroup>
+            <col style="width: 33%; background-color: lightgray;">
+            <col style="width: 33%; background-color: rgb(209, 209, 59);">
+            <col style="width: 34%; background-color: rgb(209, 59, 59);">
+        </colgroup>
+        <tr>
+            <td>
+                <div id="mydiv1"></div>
+            </td>
+            <td>
+                <div id="mydiv2"></div>
+            </td>
+            <td>
+                <div id="mydiv3"></div>
+            </td>
+        </tr>
+    </table>
+    <script>
+        for (var i=1;i<=10;i++) {
+            line="<p>" + i + "</p>"
+            mydiv1.innerHTML+=line
+        }
+        var i=1
+        while(i<=10){
+            line="<p>" + i + "</p>"
+            mydiv2.innerHTML+=line
+            i++
+        }
+        var i=1
+        do {
+            line="<p>" + i + "</p>"
+            mydiv3.innerHTML+=line
+            i++
+        } while(i<=10)
+    </script>
+</body>
+</html>
