@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Danh sách Danh mục</title>
+        <script src="mainjs.js"></script>
+    </head>
+    <body>
+        <table id="tblcategories" border="1">
+            <thead>
+                <tr>
+                    <th>Hình ảnh</th>
+                    <th>Tên danh mục</th>
+                </tr>
+            </thead>
+            <tbody id="bodycategory">
+
+            </tbody>
+        </table>
+        
+        <script>
+            var dataset_path = "dataset/category.xml";
+            var bodycategory = document.getElementById("bodycategory");
+            
+            load_category_fromxml(dataset_path, bodycategory);
+        </script>
+    </body>
+</html>

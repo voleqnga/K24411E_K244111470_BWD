@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Page Title</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        function process_saveproduct()
+        {
+            productID=document.getElementById("productid").value;
+            productName=document.getElementById("productname").value;
+            //get productbody
+            productbody=document.getElementById("productbody");
+            //create tr element
+            tr=document.createElement("tr");
+            //create 2 td
+            td_id=document.createElement("td");
+            td_name=document.createElement("td");
+            //assign value for td 
+            td_id.innerHTML=productID
+            td_name.innerHTML=productName
+            //append td into tr
+            tr.appendChild(td_id);
+            tr.appendChild(td_name);
+            //append tr into productbody
+            productbody.appendChild(tr);
+        }
+    </script>
+    <script src="js/dataset.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+
+    <h2>Member Registration</h2>
+    <hr>
+
+    <form id="registerForm">
+        <table>
+            <tr>
+                <td>Name(*)</td>
+                <td><input type="text" id="name"></td>
+            </tr>
+            <tr>
+                <td>Birthday(*)</td>
+                <td>
+                    Day: <select id="day"></select>
+                    Month: <select id="month"></select>
+                    Year: <select id="year"></select>
+                </td>
+            </tr>
+            <tr>
+                <td>Gender(*)</td>
+                <td>
+                    <input type="radio" name="gender" value="Man" checked> Man
+                    <input type="radio" name="gender" value="Woman"> Woman
+                </td>
+            </tr>
+            <tr>
+                <td>Email(*)</td>
+                <td><input type="text" id="email"></td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">Your favorite:</td>
+                <td>
+                    <input type="checkbox" name="hobby" value="Shopping"> Shopping<br>
+                    <input type="checkbox" name="hobby" value="Tourism"> Tourism<br>
+                    <input type="checkbox" name="hobby" value="Chat"> Chat<br>
+                    <input type="checkbox" name="hobby" value="Read a book"> Read a book<br>
+                    <input type="checkbox" name="hobby" value="Listening to music"> Listening to music
+                </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">Your favorite color:</td>
+                <td>
+                    <input type="radio" name="color" value="Blue" checked> <span class="bg-blue">Blue</span><br>
+                    <input type="radio" name="color" value="Red"> <span class="bg-red">Red</span><br>
+                    <input type="radio" name="color" value="Yellow"> <span class="bg-yellow">Yellow</span><br>
+                    <input type="radio" name="color" value="Green"> <span class="bg-green">Green</span><br>
+                    <input type="radio" name="color" value="Violet"> <span class="bg-violet">Violet</span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button type="button" onclick="process_register()">Sign up</button>
+                    <button type="button" onclick="process_reset()">Reset</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <br>
+    <table id="dataTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Gender</th>
+                <th>Birthday</th>
+                <th>Hobbies</th>
+                <th>Colors</th>
+            </tr>
+        </thead>
+        <tbody id="memberBody">
+            </tbody>
+    </table>
+</body>
+</html>

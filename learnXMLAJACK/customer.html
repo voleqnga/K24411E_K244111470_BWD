@@ -1,0 +1,27 @@
+
+<html>
+    <head>
+        <title>Tiêu đề trang</title>
+        <script src="js/mainjs.js"></script>
+    </head>
+    <body>
+         <table id="tblcustomers">
+            <thead>
+                <tr>
+                    <th>Customer ID</th>
+                    <th>Customer Name</th>
+                    <th>Customer Age</th>
+                    <th>Customer City</th>
+                </tr>
+            </thead>
+            <tbody id="bodycustomer">
+
+            </tbody>
+        </table>
+        <script>
+            var dataset_path="datasets/customers.xml"
+            var bodycustomer=document.getElementById("bodycustomer")
+            load_customer_fromxml(dataset_path,bodycustomer)
+        </script>
+    </body>
+</html>

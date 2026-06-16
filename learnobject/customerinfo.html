@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Page Title</title>
+    <script>
+        function saveCustomerInfo() {
+            var name = document.getElementById("customerName").value;
+            var email = document.getElementById("customerEmail").value;
+            var address = document.getElementById("customerAddress").value;
+            var phone = document.getElementById("customerPhone").value;
+            var bday = document.getElementById("bday").value;
+            var bmonth = document.getElementById("bmonth").value;
+            var byear = document.getElementById("byear").value;
+
+            var customerInfo = "Name: " + name + "<br>" +
+                               "Email: " + email + "<br>" +
+                               "Address: " + address + "<br>" +
+                               "Phone: " + phone + "<br>" +
+                               "Birthday: " + bday + "/" + bmonth + "/" + byear;
+
+            document.getElementById("customer_infor").innerHTML = customerInfo;
+        }
+    </script>
+    <script>
+        var customer_type=["Regular", "VIP", "Potential"]
+    </script>
+</head>
+<body>
+    <form name="customerForm">
+        <table>
+            <tr>
+                <td>Customer Name:</td>
+                <td><input type="text" name="customerName" id="customerName"></td>
+            </tr>
+            <tr>
+                <td>Customer Email:</td>
+                <td><input type="email" name="customerEmail" id="customerEmail"></td>
+            </tr>
+            <tr>
+                <td>Customer Address:</td>
+                <td><input type="text" name="customerAddress" id="customerAddress"></td>
+            </tr>
+            <tr>
+                <td>Customer Phone:</td>
+                <td><input type="tel" name="customerPhone" id="customerPhone"></td>
+            </tr>
+            <tr>
+                <td> Customer Birthday:</td>
+                <td>
+                    <select name="bday" id="bday"></select>
+                    <select name="bmonth" id="bmonth"></select>
+                    <select name="byear" id="byear"></select>
+                </td>
+            </tr>
+            <tr>
+                <td>Customer Type:</td>
+                <td>
+                    <select name="customerType" id="customerType">
+                    
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <button type="button" onclick="saveCustomerInfo()"> Save</button>
+        <div id="customer_infor" style="font-weight: bold; font-size:20px"></div>
+    </form>
+    <script>
+        function load_date_for_birthday_selection()
+        {
+            var bdaySelect = document.getElementById("bday");
+            var bmonthSelect = document.getElementById("bmonth");
+            var byearSelect = document.getElementById("byear");
+
+            for (var i = 1; i <= 31; i++) {
+                var option = document.createElement("option");
+                option.value = i;
+                option.text = i;
+                bdaySelect.appendChild(option);
+            }
+
+            for (var j = 1; j <= 12; j++) {
+                var option = document.createElement("option");
+                option.value = j;
+                option.text = j;
+                bmonthSelect.appendChild(option);
+            }
+
+            var currentYear = new Date().getFullYear();
+            for (var k = currentYear; k >= 1900; k--) {
+                var option = document.createElement("option");
+                option.value = k;
+                option.text = k;
+                byearSelect.appendChild(option);
+            }
+        }
+        load_date_for_birthday_selection()
+        function show_customer_type()
+        {
+            var customerTypeSelect = document.getElementById("customerType");
+            for (var i = 0; i < customer_type.length; i++) {
+                var option = document.createElement("option");
+                option.value = customer_type[i];
+                option.text = customer_type[i];
+                customerTypeSelect.appendChild(option);
+            }
+        }
+        show_customer_type();
+    </script>
+</body>
+</html>

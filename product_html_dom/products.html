@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Page Title</title>
+    <link rel="stylesheet" href="table.css">
+    <script>
+        var products=[
+            {id: 1, name:"Iphone", price:30000},
+            {id: 2, name:"Samsung", price: 25000},
+            {id: 3, name: "Xiaomi", price: 19000}
+        ]
+    </script>
+</head>
+<body>
+    <table id="tbl_product">
+        <thead>
+            <tr>
+                <th> ID</th>
+                <th> Name</th>
+                <th> Price</th>
+            </tr>
+        </thead>
+        <tbody id="products_table_body"></tbody>
+    </table>
+    <script src="js/mainjs.js"></script>
+    <script>
+        load_product_data(products, document.getElementById("products_table_body"));
+    </script>
+</body>
+</html>

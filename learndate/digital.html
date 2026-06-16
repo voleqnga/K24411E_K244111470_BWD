@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Page Title</title>
+</head>
+<body>
+    <div style="font-size:24px; font-weight:bold;" id="mydigitaltimer"></div>
+    <script>
+        function make_mydigitaltimer()
+        {
+            var mydigitaltimer=document.getElementById("mydigitaltimer");
+            var mydate=new Date();
+            var hours= mydate.getHours();
+            var minutes= mydate.getMinutes();
+            var seconds= mydate.getSeconds();
+            if(hours<10) hours="0" + hours;
+            if(minutes<10) minutes="0" + minutes;
+            if(seconds<10) seconds="0" + seconds;
+            var colors = ["red", "orange", "yellow"];
+            
+            var colorIndex = seconds % colors.length; 
+            var currentColor = colors[colorIndex];
+            
+            mydigitaltimer.innerHTML = hours + ":" + minutes + ":<span style='color: " + currentColor + "'>" + seconds + "</span>";
+        }
+        setInterval(make_mydigitaltimer, 1000);
+        
+    </script>
+</body>
+</html>

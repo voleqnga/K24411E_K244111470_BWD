@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Page Title</title>
+    <script>
+        function getinfo()
+        {
+            var uri = myform.uri.value
+            var parser = document.createElement('a')
+            parser.href = uri
+            var protocol = parser.protocol
+            var host = parser.hostname
+            var port = parser.port
+            var query = parser.search
+            var queryParams = new URLSearchParams(query)
+            var id = queryParams.get('id')
+            var name = queryParams.get('name')
+            document.getElementById('protocol').textContent = protocol
+            document.getElementById('host').textContent = host
+            document.getElementById('port').textContent = port
+            document.getElementById('query-id').textContent = id
+            document.getElementById('query-name').textContent = name
+        }
+    </script>
+</head>
+<body>
+    <form name="myform">
+        <p> URI: </p>
+        <input type="text" name="uri" id="uri" maxlength="200" size="100"
+        value = "https://www.example.com:8080/index.html?id=123&name=abc">
+        <button type="button" onclick="getinfo()">Get Info</button>
+        <p> Protocol: <span id="protocol"></span></p>
+        <p> Host: <span id="host"></span></p>
+        <p> Port: <span id="port"></span></p>
+        <p> ID: <span id="query-id"></span></p>
+        <p> Name: <span id="query-name"></span></p>
+    </form>
+</body>
+</html>

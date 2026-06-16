@@ -1,0 +1,26 @@
+<customers>
+    <customer>
+        <id>1</id>
+        <name> John Cena</name>
+        <age> 40</age>
+        <city> New York</city>
+    </customer>
+    <customer>
+        <id>2</id>
+        <name> John Snow</name>
+        <age> 24</age>
+        <city> Hanoi</city>
+    </customer>
+    <customer>
+        <id>3</id>
+        <name> Kim Cena</name>
+        <age> 19</age>
+        <city> Paris </city>
+    </customer>
+    <customer>
+        <id>4</id>
+        <name> John Wick</name>
+        <age> 40</age>
+        <city> Seoul</city>
+    </customer>
+</customers>
