@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>ex68</title>
+        <script src="js/mainjs.js"></script>
+    </head>
+    <body>
+         <table id="tblcds" border="1">
+            <thead>
+                <tr>
+                    <th>TITLE</th>
+                    <th>ARTIST</th>
+                    <th>COUNTRY</th>
+                    <th>COMPANY</th>
+                    <th>PRICE</th>
+                    <th>YEAR</th>
+                </tr>
+            </thead>
+            <tbody id="bodycd">
+
+            </tbody>
+        </table>
+        <script>
+            var dataset_path="cd_catalog.xml"
+            var bodycd=document.getElementById("bodycd")
+            load_cd_fromxml(dataset_path,bodycd)
+        </script>
+    </body>
+</html>
