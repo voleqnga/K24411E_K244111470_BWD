@@ -4,7 +4,7 @@
  * @param {*} students_xml_text 
  * @param {*} bodystudent
  */
-function load_customers(students_xml_text,bodystudent)
+function load_students(students_xml_text,bodystudent)
 {
     var parser = new DOMParser(); 
     var xmlDoc = parser.parseFromString(students_xml_text,"text/xml"); 

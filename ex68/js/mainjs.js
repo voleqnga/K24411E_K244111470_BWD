@@ -19,12 +19,12 @@ function load_cd_fromxml(dataset_path,bodycd)
             tag_cds=xmlDoc.getElementsByTagName("cd")
             for (i = 0; i < tag_cds.length; i++)
             {
-                value_tag_artist=tag_cd[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue
-                value_tag_title=tag_cd[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue
-                value_tag_country=tag_cd[i].getElementsByTagName("COUNTRY")[0].childNodes[0].nodeValue
-                value_tag_company=tag_cd[i].getElementsByTagName("COMPANY")[0].childNodes[0].nodeValue
-                value_tag_price=tag_cd[i].getElementsByTagName("PRICE")[0].childNodes[0].nodeValue
-                value_tag_year=tag_cd[i].getElementsByTagName("YEAR")[0].childNodes[0].nodeValue
+                value_tag_artist=tag_cds[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue
+                value_tag_title=tag_cds[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue
+                value_tag_country=tag_cds[i].getElementsByTagName("COUNTRY")[0].childNodes[0].nodeValue
+                value_tag_company=tag_cds[i].getElementsByTagName("COMPANY")[0].childNodes[0].nodeValue
+                value_tag_price=tag_cds[i].getElementsByTagName("PRICE")[0].childNodes[0].nodeValue
+                value_tag_year=tag_cds[i].getElementsByTagName("YEAR")[0].childNodes[0].nodeValue
 
                 tr=document.createElement("tr")
                 td_artist=document.createElement("td")
