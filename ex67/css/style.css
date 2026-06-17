@@ -1,0 +1,43 @@
+th, td { 
+    border: 1px solid black; 
+    padding: 8px; 
+    text-align: left; 
+}
+
+caption {
+    background-color: #e2e792; 
+    color: black;
+    font-weight: bold;
+    padding: 8px;
+    border: 1px solid black; 
+    border-bottom: none;
+}
+
+#tblstudents thead th { 
+    background-color: #548235; 
+    color: white; 
+    cursor: pointer;
+}
+
+#tblstudents thead th:hover { 
+    background-color: #3e6126; 
+}
+
+#tblstudents tbody tr:hover {
+    background-color: yellow;
+    font-style: italic;
+    cursor: pointer;
+}
+
+#detail {
+    display: none; 
+    margin-top: 30px;
+    width: 40%;
+}
+
+#detail th {
+    background-color: #E2EFDA;
+    color: black;
+    text-align: center;
+}
+

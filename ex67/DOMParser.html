@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Title</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script src="js\student.js"></script>
+    <script src="js\mainjs.js"></script>
+</head>
+<body>
+    <table id="tblstudents" border="1"> 
+        <caption> List of Students</caption>
+        <thead>
+            <tr>
+                <th> Student ID </th>
+                <th> Student Name </th>
+                <th> Student Birthday </th>
+                <th> Student Gender </th>
+            </tr>
+        </thead>
+
+        <tbody id="bodystudent"> 
+            
+        </tbody>
+    </table>
+    <table id="detail" >
+        <thead>
+            <tr>
+                <th colspan="2">Student Information</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Student ID:</td>
+                <td id="detid"></td> </tr>
+            <tr>
+                <td>Student Name:</td>
+                <td id="detname"></td>
+            </tr>
+            <tr>
+                <td>Birthday:</td>
+                <td id="detbday"></td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td id="detgender"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+       
+        load_customers(students_xml_text, document.getElementById("bodystudent"));
+    </script>
+</body>
+</html>
