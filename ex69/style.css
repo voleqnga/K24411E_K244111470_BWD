@@ -1,0 +1,27 @@
+table 
+{
+     border-collapse: collapse; 
+     margin-top: 15px; 
+     width: 50%; 
+}
+th, td 
+{ 
+    border: 1px solid black; 
+    padding: 5px 10px; 
+}
+.table-data th 
+{ 
+    background-color: #548235; 
+    color: white; 
+    text-align: left;
+}
+.title-row 
+{ 
+    font-weight: bold; 
+    font-size: 18px; 
+    border: none;
+}
+.filter-table td 
+{ 
+    border: none; 
+} 

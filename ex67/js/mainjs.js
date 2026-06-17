@@ -40,3 +40,26 @@ function load_students(students_xml_text,bodystudent)
         bodystudent.appendChild(tr)
     }
 }
+var asc = true; 
+function sort_table(columnIndex) {
+    var tbody = document.getElementById("bodystudent");
+    var rows = Array.from(tbody.querySelectorAll("tr"));
+    rows.sort(function(rowA, rowB) {
+        var textA = rowA.cells[columnIndex].textContent.trim();
+        var textB = rowB.cells[columnIndex].textContent.trim();
+
+        if (columnIndex === 0) {
+            return asc ? (Number(textA) - Number(textB)) : (Number(textB) - Number(textA));
+        }
+        if (asc) {
+            return textA.localeCompare(textB);
+        } else {
+            return textB.localeCompare(textA);
+        }
+    });
+    tbody.innerHTML = "";
+    for (var i = 0; i < rows.length; i++) {
+        tbody.appendChild(rows[i]);
+    }
+    asc = !asc; 
+}
