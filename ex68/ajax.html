@@ -4,7 +4,12 @@
         <script src="js/mainjs.js"></script>
     </head>
     <body>
-         <table id="tblcds" border="1">
+        <button id="getinfo" 
+        onclick="document.getElementById('tblcds').style.display = 'table'; 
+        load_cd_fromxml('cd_catalog.xml', document.getElementById('bodycd'));">
+            Get my CD collection 
+        </button>
+         <table id="tblcds" border="1" style="display: none;">
             <thead>
                 <tr>
                     <th>TITLE</th>
@@ -20,9 +25,8 @@
             </tbody>
         </table>
         <script>
-            var dataset_path="ex68\cd_catalog.xml"
-            var bodycd=document.getElementById("bodycd")
-            load_cd_fromxml(dataset_path,bodycd)
+            var bodycd=document.getElementById("bodycd");
+            var tbl = document.getElementById("tblcds");
         </script>
     </body>
 </html>
