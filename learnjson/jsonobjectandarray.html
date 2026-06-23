@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Page Title</title>
+    <script>
+        customers=[
+            {
+                "customer_type":"VIP",
+                "customers":[
+                    {
+                        "ID":"c1",
+                        "Name":"RM",
+                        "Age":"32",
+                        "Email":"juni@gmail.com"
+                    },
+                    {
+                        "ID":"c2",
+                        "Name":"JIN",
+                        "Age":"34",
+                        "Email":"jini@gmail.com"
+                    },
+                ]
+            },
+            {
+                "customer_type":"Normal",
+                "customers":[
+                    {
+                        "ID":"c3",
+                        "Name":"SUGA",
+                        "Age":"33",
+                        "Email":"nyunggi@gmail.com"
+                    },
+                    {
+                        "ID":"c4",
+                        "Name":"jhope",
+                        "Age":"32",
+                        "Email":"hobi@gmail.com"
+                    },
+                    {
+                        "ID":"c5",
+                        "Name":"Jimin",
+                        "Age":"31",
+                        "Email":"dimin@gmail.com"
+                    },
+                    {
+                        "ID":"c6",
+                        "Name":"V",
+                        "Age":"31",
+                        "Email":"teohung@gmail.com"
+                    },
+                    {
+                        "ID":"c7",
+                        "Name":"JK",
+                        "Age":"29",
+                        "Email":"kookoo@gmail.com"
+                    },
+                ]
+            }
+        ]
+    </script>
+</head>
+<body onload="load_customers()">
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>EMail</th>
+            </tr>
+        </thead>
+        <tbody id="customerbody">
+
+        </tbody>
+    </table>
+    <script>
+        function load_customers()
+        {
+            customerbody=document.getElementById("customerbody")
+            for(i=0; i<customers.length;i++)//type of customer
+            {
+                type_customer=customers[i]//type at position i
+                tr_type=document.createElement("tr")
+                td_type=document.createElement("td")
+                td_type.setAttribute("colspan",4)
+                td_type.innerHTML=type_customer.customer_type
+                tr_type.appendChild(td_type)
+                customerbody.appendChild(tr_type)
+                for(j=0; j<type_customer.customers.length;j++)
+                {
+                    customer=type_customer.customers[j]
+
+                    tr=document.createElement("tr")
+                    td_id=document.createElement("td")
+                    td_name=document.createElement("td")
+                    td_age=document.createElement("td")
+                    td_email=document.createElement("td")
+                    td_id.innerHTML=customer.ID
+                    td_name.innerHTML=customer.Name
+                    td_age.innerHTML=customer.Age
+                    td_email.innerHTML=customer.Email
+                    tr.appendChild(td_id)
+                    tr.appendChild(td_name)
+                    tr.appendChild(td_age)
+                    tr.appendChild(td_email)
+                    customerbody.appendChild(tr)
+
+
+                }
+                customer=customers[i]
+
+                tr=document.createElement("tr")
+                td_id=document.createElement("td")
+                td_name=document.createElement("td")
+                td_age=document.createElement("td")
+                td_email=document.createElement("td")
+                td_id.innerHTML=customer.ID
+                td_name.innerHTML=customer.Name
+                td_age.innerHTML=customer.Age
+                td_email.innerHTML=customer.Email
+                tr.appendChild(td_id)
+                tr.appendChild(td_name)
+                tr.appendChild(td_age)
+                tr.appendChild(td_email)
+                customerbody.appendChild(tr)
+
+
+            }
+        }
+    </script>
+</body>
+</html>

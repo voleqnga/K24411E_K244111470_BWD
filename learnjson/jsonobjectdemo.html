@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Page Title</title>
+    <script>
+        var customer={
+            "CustomerID":"c1",
+            "Firstname": "Tom",
+            "Lastname": "Tran",
+            "Email": "tom@gmail.com",
+            "Telephone": "091234567",
+            Fullname:function(){
+                return this.Firstname+" "+this.Lastname
+            }
+        }
+    </script>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td> CustomerID:</td>
+            <td id="td_customerid"></td>
+        </tr>
+        <tr>
+            <td> First name:</td>
+            <td id="td_firstname"></td>
+        </tr>
+        <tr>
+            <td> Last name:</td>
+            <td id="td_lastname"></td>
+        </tr>
+        <tr>
+            <td> Full name:</td>
+            <td id="td_fullname"></td>
+        </tr>
+        <tr>
+            <td> Email:</td>
+            <td id="td_email"></td>
+        </tr>
+        <tr>
+            <td> Telephone:</td>
+            <td id="td_telephone"></td>
+        </tr>
+    </table>
+    <script>
+        td_customerid=document.getElementById("td_customerid")
+        td_firstname=document.getElementById("td_firstname")
+        td_lastname=document.getElementById("td_lastname")
+        td_fullname=document.getElementById("td_fullname")
+        td_email=document.getElementById("td_email")
+        td_telephone=document.getElementById("td_telephone")
+        td_customerid.innerHTML=customer.CustomerID
+        td_firstname.innerHTML=customer.Firstname
+        td_lastname.innerHTML=customer.Lastname
+        td_fullname.innerHTML=customer.Fullname() 
+        td_email.innerHTML=customer.Email
+        td_telephone.innerHTML=customer.Telephone
+        
+
+    </script>
+</body>
+</html>
