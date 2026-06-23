@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Ex69</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <table class="filter-table">
+        <tr>
+            <td class="title-row">Title:</td>
+            <td>
+                <select id="titleSelect" onchange="filterEmployees()">
+                    <option value="">-- Select --</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+
+    <table id="employeeTable" class="table-data" style="display: none;">
+        <thead>
+            <tr>
+                <th>Employee ID</th>
+                <th>Employee Name</th>
+                <th>Phone</th>
+            </tr>
+        </thead>
+        <tbody id="employeeBody">
+            </tbody>
+    </table>
+
+    <script src="mainjs.js"></script>
+</body>
+</html>

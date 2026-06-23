@@ -1,10 +1,12 @@
 function load_cd_fromxml(dataset_path,bodycd)
 {
+    bodycd.innerHTML = "";
     var xhr =new XMLHttpRequest();
     xhr.open("GET",dataset_path,true);
     xhr.send();
     xhr.onreadystatechange=function()
     {
+        console.log("Trạng thái hiện tại: " + xhr.readyState);
         if (xhr.readyState==4 && xhr.status==200)
         {
             //handling when loading data successfully
@@ -26,6 +28,7 @@ function load_cd_fromxml(dataset_path,bodycd)
                 value_tag_price=tag_cds[i].getElementsByTagName("PRICE")[0].childNodes[0].nodeValue
                 value_tag_year=tag_cds[i].getElementsByTagName("YEAR")[0].childNodes[0].nodeValue
 
+                var tr = document.createElement("tr");
                 td_title = document.createElement("td");
                 td_title.innerHTML = value_tag_title;
                 td_artist = document.createElement("td");
