@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Exam - Structurer</title>
+    <link rel src="css\style.css">
+</head>
+
+<body onload="loadAboutMe(); updateClock();">
+
+    <table style="width: 100%; border-collapse: collapse;">
+        
+        <tr>
+            <td id="partA" style="padding: 0; vertical-align: top;">
+                <ul class="menu">
+                    <li><a onclick="loadAboutMe()">About me</a></li>
+                    
+                    <li><a>API and External</a>
+                        <ul class="submenu">
+                            <li><a onclick="loadContent('Tuoitre Weather API')">Tuoitre Weather API</a></li>
+                            <li><a onclick="loadContent('Vnexpress RSS')">Vnexpress RSS</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li><a>Shopping</a>
+                        <ul class="submenu">
+                            <li><a onclick="loadContent('Products')">Products</a></li>
+                            <li><a onclick="loadContent('My Cart')">My Cart</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li><a>An Icon ⚙️</a>
+                        <ul class="submenu">
+                            <li><a onclick="loadContent('Login/Logout')">Login/Logout</a></li>
+                            <li><a onclick="loadContent('My Infor')">My Infor</a></li>
+                            <li><a onclick="loadContent('Administrator')">Administrator</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+
+        <tr>
+            <td id="partB" style="vertical-align: top;">
+                </td>
+        </tr>
+
+        <tr>
+            <td id="partC" style="padding: 0;">
+                <marquee behavior="alternate" id="movingClock"></marquee>
+            </td>
+        </tr>
+
+    </table>
+
+    <script src="js/mainjs.js"></script>
+    <script>
+        var productbody = document.getElementById("productbody");
+        var dataset_path = "dataset/ecommerce-sample.json";
+        
+        // Gọi hàm load dữ liệu JSON
+        load_product_fromjson(dataset_path, productbody);
+    </script>
+</body>
+</html>

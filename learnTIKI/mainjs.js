@@ -28,12 +28,10 @@ function load_category_fromxml(dataset_path, bodycategory) {
                 tr.appendChild(td_image);
                 tr.appendChild(td_name);
                 
-                // Đã sửa 'bodycustomer' thành 'bodycategory'
                 bodycategory.appendChild(tr); 
             }
         }
         else if (xhr.readyState == 4 && xhr.status != 200) {
-            // Xử lý khi không tải được dữ liệu (ví dụ sai đường dẫn)
             console.error("Không thể tải file XML. Status: " + xhr.status);
         }
     }
