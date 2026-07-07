@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Ex 49</title>
+    <style>
+        body {
+            background-color: #9dffff;
+            font-family: "Times New Roman", Times, serif;
+            margin: 20px;
+        }
+        h1.title {
+            color: #ff3333;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.8em;
+        }
+        hr {
+            border: 0;
+            border-top: 1px solid #333;
+            margin-bottom: 20px;
+        }
+        .question-label {
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .options-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-left: 10px;
+        }
+        .options-table td {
+            padding: 5px 0;
+            vertical-align: middle;
+        }
+        .keyword-input {
+            width: 90%;
+            padding: 4px;
+            margin-left: 15px;
+        }
+        .img-button {
+            background: transparent; 
+            border: none;
+            cursor: pointer;
+            margin-right: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 class="title">Online Classifieds Search Form</h1>
+        <hr>
+        <form id="classifiedForm">
+            <h3 class="question-label">
+                1) Search for a classified in the following sections:
+            </h3>
+            <table class="options-table">
+                <tr>
+                    <td width="30%"><input type="radio" name="section" id="sec-emp"> 
+                        <label for="sec-emp">
+                            Employment
+                        </label>
+                    </td>
+                    <td><input type="radio" name="section" id="sec-per">
+                        <label for="sec-per">
+                            Personal
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="section" id="sec-sale" checked> 
+                        <label for="sec-sale">
+                            For Sale
+                        </label>
+                    </td>
+                    <td><input type="radio" name="section" id="sec-misc"> 
+                        <label for="sec-misc">
+                            Miscellaneous
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="section" id="sec-house"> 
+                        <label for="sec-house">
+                            Housing
+                        </label>
+                    </td>
+                    <td><input type="radio" name="section" id="sec-all"> 
+                        <label for="sec-all">
+                            All of the above
+                        </label>
+                    </td>
+                </tr>
+            </table>
+            <h3 class="question-label">
+                2) Search the following publications:
+            </h3>
+            <table class="options-table">
+                <tr>
+                    <td width="33%"><input type="checkbox" id="pub-mid"> 
+                        <label for="pub-mid">
+                            Midwest times
+                        </label>
+                    </td>
+                    <td width="33%"><input type="checkbox" id="pub-mod"> 
+                        <label for="pub-mod">
+                            Modern News
+                        </label>
+                    </td>
+                    <td><input type="checkbox" id="pub-emp"> 
+                        <label for="pub-emp">
+                            Employment Today
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="pub-great" checked> 
+                        <label for="pub-great">
+                            Great Lakes Classifieds
+                        </label>
+                    </td>
+                    <td><input type="checkbox" id="pub-mid-daily"> 
+                        <label for="pub-mid-daily">
+                            Middleton Daily
+                        </label></td>
+                    <td><input type="checkbox" id="pub-cash"> 
+                        <label for="pub-cash">
+                            Cashtown Daily News
+                        </label>
+                    </td>
+                </tr>
+            </table>
+
+            <h3 class="question-label">
+                3) From to 
+                <input type="text" class="date-input" placeholder="mm/dd/yy"> 
+                to 
+                <input type="text" class="date-input" placeholder="mm/dd/yy">
+            </h3>
+
+            <h3 class="question-label">
+                4) Enter a few keywords to describe the classified.
+            </h3>
+            <input type="text" class="keyword-input">
+
+            <h3 class="question-label">
+                5) Click one of the options below:
+            </h3>
+            <div style="margin-left: 15px;">
+                <button type="button" class="img-button" onclick="alert('Search simulation')">
+                    <img src="images/Search.gif"><br>
+                    <span style="color: #009900; font-weight: bold;">Search</span>
+                </button>
+
+                <button type="button" class="img-button" onclick="alert('Help page: Please select your options and enter keywords to search.')">
+                    <img src="images/Help.gif"><br>
+                    <span style="color: #0033cc; font-weight: bold;">Help</span>
+                </button>
+
+                <button type="reset" class="img-button">
+                    <img src="images/Cancel.gif"><br>
+                    <span style="color: #cc0000; font-weight: bold;">Cancel</span>
+                </button>
+                
+            </div>
+
+        </form>
+    </div>
+
+</body>
+</html>
