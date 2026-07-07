@@ -1,0 +1,98 @@
+BODY {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    margin: 10px;
+}
+
+H1, H2, H3, H4 {
+    color: #990099; 
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+table.main-layout {
+    width: 100%;
+    border: 0;
+    border-collapse: collapse;
+    background-color: #fea35d; 
+}
+
+.header {
+    text-align: center;
+    padding: 20px 10px;
+}
+
+.header > h1 {
+    font-size: 2.2em;
+    margin: 0;
+}
+
+.weather-box {
+    background-color: #fffae6;
+    border: 1px solid #ffaa00;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.9em;
+    color: #444444;
+}
+
+.weather-box > a {
+    color: #0033cc;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.main-content {
+    vertical-align: top;
+    padding: 10px;
+    width: 75%;
+}
+
+.main-content > p {
+    color: #663300; 
+    line-height: 1.4;
+    font-size: 0.95em;
+    text-align: justify;
+}
+
+img.pic-right {
+    float: right;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #888888;
+    width: 220px;
+}
+
+img.pic-left {
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #888888;
+    width: 200px;
+}
+
+.sidebar {
+    vertical-align: top;
+    background-color: #66ffb3; 
+    padding: 20px 15px;
+    width: 25%;
+    border-left: 1px solid #444444;
+}
+
+.sidebar > h3 {
+    margin-top: 15px;
+    font-size: 1.1em;
+    padding-bottom: 3px;
+}
+
+.sidebar > a {
+    display: block; 
+    color: #0033cc;
+    font-size: 0.9em;
+    margin-bottom: 6px;
+}
+
+.sidebar > a:hover {
+    color: red;
+}
