@@ -14,7 +14,7 @@ text-transform:uppercase
 BLOCKQUOTE{
 background-color:silver
 }
-UL {list-style:circle url(Apple.jpg) outside}
+UL {list-style:circle url(images/Apple.jpg) outside}
 UL B {
 color:rgb(155,0,0)
 }
