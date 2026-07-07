@@ -1,0 +1,131 @@
+BODY {
+    font-family: Calibri, Arial, sans-serif;
+    color: #a65d00;
+    background-color: white;
+    margin: 20px;
+}
+
+table.main-table {
+    width: 100%;
+    border: 0;
+    border-collapse: collapse;
+}
+
+H3 {
+    font-family: 'Century Gothic', Arial, sans-serif;
+    color: #ff9900;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.header-box {
+    text-align: right;
+    padding-bottom: 10px;
+}
+
+.logo-container {
+    text-align: right;
+    display: inline-block;
+    font-family: 'Century Gothic', Arial, sans-serif;
+    padding-right: 10px;
+}
+
+.logo-online {
+    background-color: #ffaa00;
+    color: white;
+    font-size: 0.75em;
+    font-weight: bold;
+    padding: 2px 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.logo-main {
+    color: #333333;
+    font-size: 2.8em;
+    font-weight: 300;
+    letter-spacing: 2px;
+    line-height: 1.1;
+}
+
+hr.header-line {
+    border: 0;
+    border-top: 2px solid #ff9900;
+}
+
+.menu-sidebar {
+    width: 200px;
+    background: #f5cf93 url(images/back.jpg) repeat;
+    padding: 20px 15px;
+    vertical-align: top; 
+}
+
+.menu-sidebar > ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.menu-sidebar > ul > li {
+    margin-bottom: 8px;
+    color: #cc7a00;
+}
+
+A {
+    color: #0033cc;
+    text-decoration: underline;
+}
+
+A:hover {
+    color: red;
+}
+
+.content-area {
+    padding: 0px 20px 20px 30px;
+    vertical-align: top; 
+}
+
+DIV.materials-box {
+    float: right;
+    width: 260px;
+    border: 3px solid #cc7a00;
+    background-color: #fff5e6;
+    padding: 15px;
+    margin-left: 20px;
+    margin-bottom: 15px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+DIV.materials-box > h3 {
+    color: #ff9900;
+    margin-top: 0;
+    font-size: 1.3em;
+}
+
+DIV.materials-box > ul {
+    list-style-type: square;
+    padding-left: 20px;
+    color: #cc7a00;
+}
+
+DIV.materials-box > ul > li {
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+.footer-box {
+    padding-top: 20px;
+}
+
+hr.footer-line {
+    border: 0;
+    border-top: 1px solid #ffaa66;
+}
+
+.footer-text {
+    font-size: 0.85em;
+    color: #ffaa66;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
