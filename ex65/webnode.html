@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Web Node</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+        <table>
+            <tr>
+                <td>
+                    <button onclick="add_node()">
+                        Add Node
+                    </button>
+                </td>
+                <td>Content</td>
+                <td>
+                    <input type="text" id="addContent" class="input-content">
+                </td>
+                <td>Position</td>
+                <td>
+                    <input type="text" id="addPos" class="input-pos">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="remove_node()">
+                        Remove Node
+                    </button>
+                </td>
+                <td colspan="2"></td>
+                <td>Position</td>
+                <td>
+                    <input type="text" id="removePos" class="input-pos">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="modify_node()">
+                        Modify Node
+                    </button>
+                </td>
+                <td>New Content</td>
+                <td>
+                    <input type="text" id="modifyContent" class="input-content">
+                </td>
+                <td>Position</td>
+                <td>
+                    <input type="text" id="modifyPos" class="input-pos">
+                </td>
+            </tr>
+        </table>
+        <div>
+            Web Node
+            <ul id="nodeList">
+                <li>Data base</li>
+                <li>Web1</li>
+                <li>Web2</li>
+            </ul>
+        </div>
+        
+    <script src="js/mainjs.js"></script>
+
+</body>
+</html>
