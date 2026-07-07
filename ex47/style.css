@@ -1,0 +1,38 @@
+BODY {
+    font-family:'Times New Roman', Times, serif;
+    margin: 20px;
+}
+TABLE {
+    width: 100%;
+    border-collapse: collapse; 
+    font-size: 1em;
+}
+TH, TD {
+    border: 1px solid #cccccc; 
+    padding: 8px 12px;
+    text-align: left;
+}
+THEAD TH {
+    background-color: #2b78c2; 
+    color: white;              
+    font-weight: bold;
+}
+THEAD TH:first-child {
+    width: 50px;
+}
+TBODY TR:nth-child(2n+1) {
+    background-color: whitesmoke;
+}
+TBODY TR:nth-child(2n) {
+    background-color: pink;
+}
+
+TBODY TR:hover {
+    background-color: yellow;
+    cursor: pointer; 
+}
+
+TFOOT TD {
+    background-color: #0073cc; 
+    color: white;
+}
